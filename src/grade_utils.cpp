@@ -11,17 +11,17 @@ double grade_utils::calculateGrade() {
 	std::cout << "Enter student type (U for undergrad. G for grad):" << std::endl;
 	std::cin >> single_char;
 
-	std::cout << "Enter numeric grade" << std::endl;
+	std::cout << "Enter numeric grade:" << std::endl;
 	std::cin >> numeric_grade;
 
 	if (numeric_grade < 0 || numeric_grade > 100) {
 		std::cout << "Invalid grade" << std::endl;
-		std::cerr << "Error" << std::endl;
+		std::exit(1);
 	}
 
-	if (single_char == 'U' && numeric_grade >= 60) {
+	if ((single_char == 'U' || single_char == 'u') && numeric_grade >= 60) {
 		status = 1;
-	} else if (single_char == 'G' && numeric_grade >= 70) {
+	} else if ((single_char == 'G' || single_char == 'g') && numeric_grade >= 70) {
 		status = 1;
 	} else {
 		status = 0;

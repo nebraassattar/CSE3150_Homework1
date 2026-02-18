@@ -6,9 +6,10 @@ void do_while_count_utils::runDoWhileCount() {
 	int variable;
 
 	do {
-		std::cout << "Enter a number betweenn 1 and 5:" << std::endl;
+		std::cout << "Enter a number between 1 and 5:" << std::endl;
+
 		std::cin >> variable;
-	} while (variable <= 1 || variable >= 5);
+	} while (variable < 1 || variable > 5);
 
 	int array[5] = {1, 2, 3, 4, 5};
 
