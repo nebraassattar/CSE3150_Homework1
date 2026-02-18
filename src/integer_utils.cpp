@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../include/integer_utils.h"
+#include "integer_utils.h"
 
-void runIntegerOption() {
+void integer_utils::runIntegerOption() {
 	
 	int first, second;
 	
